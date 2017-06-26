@@ -1,0 +1,20 @@
+<h2 class="page-header">Cellar</h2>
+<p class="lead"> Welcome to your cellar</p>
+<form>
+	<div class="form-group">
+		<input type="text" name="searchStr" (keyup)="searchWine()" [(ngModel)]="searchStr" class="form-control" placeholder="Search Wine...">
+	</div>
+</form>
+
+<div *ngIf="searchRes">
+	<div *ngFor="let res of searchRes">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="search-res well">
+					<h4>{{searchRes}}</h4>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+
